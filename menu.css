@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    max-width: 100%;
+    width: 100%;
+    margin: 0px auto;
+}
+#header{
+    background-color: #1abc9c;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    width: 100%;
+}
+.bgmenu-bar {
+    background-color: #ffffff; /* Màu trắng */
+}
+
+#logo{
+    padding: 5px 0px;
+}
+#logo img{
+    width: 50px;
+    height: auto;
+}
+
+#main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-menu li{
+    position: relative;
+}
+#main-menu li a{
+    color: #f8f8f8;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+
+#main-menu ul.sub-menu{
+    position: absolute;
+    background-color: #16a085;
+    padding: 15px 0px;
+    list-style: none;
+    width: 150px;
+    border: 2px solid #27ae60;
+    display: none;
+}
+
+#main-menu li:hover>ul.sub-menu{
+    display: block;
+}
+
+#main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 2px solid #4d6c62;
+    left: 0;
+}
+
+#main-menu ul.sub-menu li:hover>a{
+    border-bottom: 2px solid #4528ab;
+}
+
+#main-menu ul.sub-menu li:last-child a{
+    border: none; 
+}
+
+#main-menu ul.sub-menu ul.sub-menu{
+    left: 147px;
+    top: -15px;
+}
+
+/* thiết lập border khi hover */
+
+#main-menu>li>a{
+    position: relative;
+}
+
+#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: #7f4848;
+    position: absolute; 
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075 , 0.82 , 0.165 , 1);
+}
+#main-menu>li:hover>a::before{
+    width: 100%;
+}
+#main-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    color: #f5f5f5;
+    position: absolute;
+    padding: 18px 0px;
+    top: 0px;   
+    right: 0px;
+}
+#main-menu .sub-menu li:hover>a{
+    color: crimson;
+}
+#main-menu .sub-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    color: #f5f5f5;
+    position: absolute;
+    padding: 9px 0px;
+    top: 0px;   
+    right: 0px;
+}
+#main-menu .sub-menu>li.has-child:hover::after{
+    color: rgb(193, 20, 55);
+}
+.text-box{
+    width: 100%;
+    color:#9cffff;
+    text-align: center;
+}
+.text-box H1{
+    font-size: 42px;
+    border: 4px solid #696969;
+    background: linear-gradient(to right, #696969, #696969) padding-box;
+    background-clip: text; 
+}
+.login{
+    margin:0;
+}
+.banner{
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 55vh;
+    width: 100%;
+    background-image: url(image/Banner/Group\ 1.png);
+}
+.container .menu-ham{
+    display:none;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    width: 35px;
+}
+
+@media screen and (max-width: 960px) {
+    .container{
+        padding: 0;
+    }
+    .container .menu-ham{
+        display: block;
+    }
+    .nav-links  {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ABOUT */
+h1{
+    color: #7f4848;
+    font-size: 30px;
+}
+#about ul li{
+    color:rgb(186, 75, 56);
+}
